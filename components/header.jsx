@@ -5,7 +5,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-black md:p-4 md:py-2 sm:p-2 p-1 shadow-md">
+    <header className="bg-black md:p-4 md:py-2 p-2 shadow-md sticky top-0 w-full z-10">
       <div className="container mx-auto flex items-center justify-between">
         <Link href={"/"}>
           <Image
@@ -16,12 +16,12 @@ const Header = () => {
             className="aspect-[128/137] w-16 h-auto"
           />
         </Link>
-        <nav className="text-white">
+        <nav className="text-white md:block hidden">
           <ul className="flex md:gap-6 gap-4">
             <li>
               <Link
-                href={"#services"}
-                className="flex items-center gap-2 hover:text-yellow-300 transition"
+                href={"/#services"}
+                className="flex items-center gap-2 hover:text-accent transition"
               >
                 <Wrench className="w-4 h-4" />
                 <span>Services</span>
@@ -29,8 +29,8 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href={"#contact"}
-                className="flex items-center gap-2 hover:text-yellow-300 transition"
+                href={"/#contact"}
+                className="flex items-center gap-2 hover:text-accent transition"
               >
                 <Mail className="w-4 h-4" />
                 <span>Contact</span>
@@ -39,7 +39,7 @@ const Header = () => {
             <li>
               <Link
                 href={"/booking"}
-                className="flex items-center gap-2 hover:text-yellow-300 transition"
+                className="flex items-center gap-2 hover:text-accent transition"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Booking</span>
